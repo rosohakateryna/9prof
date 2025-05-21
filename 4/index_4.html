@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Віртуальна подорож IT: Китай</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: #f0f8ff;
+      font-weight: bold;
+    }
+
+    #highlightBtn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #toTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌏 Віртуальна подорож IT: <span>Китай</span></h1>
+  </header>
+
+  <section class="card">
+    <img src="china-tech.jpg" alt="Китай IT">
+    <h2>📌 Розвиток IT-сектору</h2>
+    <p>Китай — один із лідерів світового IT-ринку. Держава активно інвестує у високі технології, штучний інтелект, 5G, робототехніку та хмарні сервіси. Стратегія <strong>"Made in China 2025"</strong> допомагає країні стати передовою цифровою державою.</p>
+  </section>
+
+  <section class="card">
+    <img src="tech-companies.jpg" alt="Технологічні компанії">
+    <h2>📌 Відомі технологічні компанії</h2>
+    <ul>
+      <li><strong>Huawei</strong> — смартфони, 5G, електроніка.</li>
+      <li><strong>Alibaba</strong> — найбільша онлайн-платформа і фінтех.</li>
+      <li><strong>Tencent</strong> — власник WeChat та відеоігор.</li>
+      <li><strong>Xiaomi</strong> — доступна розумна техніка та гаджети.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <img src="smart-city.jpg" alt="Smart City">
+    <h2>📌 Цікаві факти</h2>
+    <ul>
+      <li>Розумні міста з цифровим управлінням трафіком і безпекою.</li>
+      <li>Лідер за кількістю IT-випускників щороку.</li>
+      <li>Програма <strong>"Internet Plus"</strong> для цифровізації бізнесу.</li>
+      <li>Технопарк <strong>Zhongguancun</strong> — китайська "Силіконова долина".</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>📊 ТОП-5 технологічних компаній Китаю</h2>
+    <table id="companyTable">
+      <thead>
+        <tr>
+          <th>Назва</th>
+          <th>Галузь</th>
+          <th>Рік заснування</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Huawei</td>
+          <td>Телекомунікації, смартфони</td>
+          <td>1987</td>
+        </tr>
+        <tr>
+          <td>Alibaba</td>
+          <td>Електронна комерція, хмарні сервіси</td>
+          <td>1999</td>
+        </tr>
+        <tr>
+          <td>Tencent</td>
+          <td>Соцмережі, ігри</td>
+          <td>1998</td>
+        </tr>
+        <tr>
+          <td>Xiaomi</td>
+          <td>Смарт-гаджети</td>
+          <td>2010</td>
+        </tr>
+        <tr>
+          <td>Baidu</td>
+          <td>Пошукові системи, ШІ</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="highlightBtn">🔍 Виділити лідера</button>
+  </section>
+
+  <button id="toTopBtn">⬆️</button>
+
+  <footer>
+    <p>© 2025 Віртуальна подорож IT 🌐</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("toTopBtn");
+    window.onscroll = () => {
+      btn.style.display = window.pageYOffset > 300 ? "block" : "none";
+    };
+    btn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const highlightBtn = document.getElementById("highlightBtn");
+    highlightBtn.onclick = () => {
+      const table = document.getElementById("companyTable");
+      const rows = table.getElementsByTagName("tr");
+      for (let i = 1; i < rows.length; i++) {
+        rows[i].classList.remove("highlight");
+      }
+      rows[1].classList.add("highlight"); // Виділяємо Huawei як лідера
+    };
+  </script>
+
+</body>
+</html>
