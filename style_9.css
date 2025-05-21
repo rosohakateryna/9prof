@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-image: url('ll.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 90px;
+    text-align: center;
+}
+
+main {
+    padding: 20px 40px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #b52417;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #05548c;
+    color: #ddd;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.text-block {
+    flex: 1 1 50%;
+    max-width: 600px;
+}
+
+.video-block {
+    flex: 1 1 40%;
+    max-width: 560px;
+}
+
+@media (max-width: 900px) {
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-block, .video-block {
+        max-width: 100%;
+    }
+
+    .video-block iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+p, li{
+    font-size: 17px;
+}
+
+.top-tech-companies {
+    padding: 40px;
+    background-color: #f0f5f9;
+    border-top: 3px solid #05548c;
+}
+
+.top-tech-companies h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #05548c;
+}
+
+.company-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.company-card {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #05548c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.company-card h3 {
+    margin-top: 0;
+    color: #003366;
+}
+
+@media (max-width: 800px) {
+    .company-card {
+        flex: 1 1 100%;
+    }
+}
+
+.company-content {
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.company-text {
+  flex: 1;
+}
+
+.company-image {
+  flex-shrink: 0; 
+}
+
+.company-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
